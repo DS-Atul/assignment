@@ -1,0 +1,85 @@
+/* Button Styles */
+.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Function for Hover Color */
+@function hover-color($color) {
+    @return mix($color, #fff, 25%);
+}
+
+/* Function for Active Color */
+@function active-color($color) {
+    @return mix($color, #fff, 50%);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #93b2d6;
+    font-weight: 500;
+}
+
+/* Navbar Nav Styles */
+.navbar-nav {
+    border-radius: 40px;
+}
+
+.navbar-nav li {
+    padding: 0 25px;
+}
+
+.navbar-nav a {
+    border-radius: 30px;
+}
+
+.navbar-nav a:hover {
+    background-color: hover-color($headerColor);
+    color: #fff;
+}
+
+.navbar-nav a:active {
+    background-color: active-color(#0695b2);
+    color: #fff;
+    --bs-scroll-height: 100px;
+}
+
+/* Call Now Button Styles */
+.call-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    padding-right: 50px;
+    margin-right: 50px;
+}
+
+.call-now-button a {
+    text-decoration: none;
+    color: #151515;
+}
+
+.call-now-button:hover {
+    background-color: hover-color(#0695b2);
+}
+
+.call-now-button:focus {
+    outline: none;
+}
+
+/* Media Query */
+@media (max-width: 1200px) {
+    .nav-button button {
+        display: none;
+    }
+}
